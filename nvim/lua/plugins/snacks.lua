@@ -17,6 +17,16 @@ return {
         mode = { "n", "t" },
         desc = "Toggle terminal",
       },
+      {
+        "<leader>ta",
+        function()
+          for _, terminal in ipairs(Snacks.terminal.list()) do
+            terminal:toggle()
+          end
+        end,
+        mode = { "n", "t" },
+        desc = "Toggle all terminals",
+      },
     },
   },
 }
